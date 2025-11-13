@@ -1,0 +1,200 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║     ✅ BASE DE DATOS ACTUALIZADA CON NUEVAS PREGUNTAS         ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+📊 ANÁLISIS DE DUPLICADOS DETECTADOS
+══════════════════════════════════════════════════════════════════
+
+  🔴 DUPLICADO #1:
+     Pregunta 7 (Grupo 1) = Pregunta 15 (Grupo 2)
+     
+     Texto: "¿Qué valor contendrá la variable resultado_final 
+            después de ejecutar este código? def resta(a, b)..."
+     
+     ✅ ACCIÓN: Eliminado del Grupo 2 (pregunta 15)
+
+
+  🔴 DUPLICADO #2:
+     Pregunta 10 (Grupo 1) = Pregunta 7 (Grupo 2)
+     
+     Texto: "Después de realizar una operación de groupby, 
+            como df.groupby(Pais)[Ventas].sum()..."
+     
+     ✅ ACCIÓN: Eliminado del Grupo 2 (pregunta 7)
+
+
+  🔴 DUPLICADO #3:
+     Pregunta 16 (Grupo 1) = Pregunta 4 (Grupo 2)
+     
+     Texto: "Un desarrollador coloca la línea df = 
+            pd.read_csv(datos.csv) fuera de cualquier..."
+     
+     ✅ ACCIÓN: Eliminado del Grupo 2 (pregunta 4)
+
+
+📈 RESUMEN DE PREGUNTAS
+══════════════════════════════════════════════════════════════════
+
+  Total recibidas:       40 preguntas
+  Duplicados detectados:  3 preguntas
+  ─────────────────────────────────────
+  Total únicas:          37 preguntas ✅
+
+
+✅ ESTADO ACTUAL DE LA BASE DE DATOS
+══════════════════════════════════════════════════════════════════
+
+  📦 Base de datos:      PostgreSQL 15
+  🗄️  Tabla:            preguntas
+  📊 Total registros:   37 preguntas
+  🔍 Búsqueda:          Sin tildes habilitada
+  💾 Persistencia:      Volumen Docker
+  🌐 Puerto:            localhost:5433
+
+
+🎯 DISTRIBUCIÓN DE PREGUNTAS POR TEMA
+══════════════════════════════════════════════════════════════════
+
+  📊 Python & Pandas:         ~12 preguntas
+  🎨 Streamlit & Visualización: ~10 preguntas
+  🔧 FastAPI & APIs:           ~6 preguntas
+  🐳 Docker & DevOps:          ~4 preguntas
+  🌿 Git & Control de Versiones: ~3 preguntas
+  💾 Bases de Datos:           ~2 preguntas
+
+
+📝 EJEMPLOS DE PREGUNTAS CARGADAS
+══════════════════════════════════════════════════════════════════
+
+  1️⃣  "¿Cuál es la característica principal que distingue 
+      a una tupla de una lista en Python?"
+
+  2️⃣  "Quieres mostrar un gráfico de dispersión interactivo 
+      creado con Plotly Express..."
+
+  3️⃣  "¿Cuál es la diferencia fundamental entre una Imagen 
+      de Docker y un Contenedor de Docker?"
+
+  37️⃣ "Un programador necesita mostrar el resultado de un 
+      cálculo de promedio..."
+
+
+🔧 VERIFICACIÓN REALIZADA
+══════════════════════════════════════════════════════════════════
+
+  ✓ init.sql actualizado con 37 preguntas
+  ✓ Volumen Docker eliminado
+  ✓ Base de datos recreada desde cero
+  ✓ 37 preguntas insertadas correctamente
+  ✓ Backend verificado: HTTP 200 OK
+  ✓ API devuelve: {"success":true,"total":37}
+
+
+🌐 ACCEDE AL SISTEMA
+══════════════════════════════════════════════════════════════════
+
+  Frontend:   http://localhost:5053
+  Backend:    http://localhost:5052/api
+  Database:   localhost:5433
+
+
+🎓 FUNCIONALIDADES DISPONIBLES
+══════════════════════════════════════════════════════════════════
+
+  ✅ Ver las 37 preguntas del examen
+  ✅ Buscar preguntas (sin tildes)
+  ✅ Buscar por voz 🎤
+  ✅ Crear nuevas preguntas
+  ✅ Editar preguntas existentes
+  ✅ Eliminar preguntas
+  ✅ Exportar a PDF (37 preguntas)
+  ✅ Exportar a Excel (37 preguntas)
+
+
+⚠️  SISTEMA DE DETECCIÓN DE DUPLICADOS
+══════════════════════════════════════════════════════════════════
+
+  El sistema actual NO impide duplicados en la base de datos.
+  
+  Si intentas crear una pregunta que ya existe:
+  ✓ Se guardará sin error
+  ✗ NO te advertirá que es duplicada
+  
+  💡 SOLUCIÓN MANUAL:
+     - Antes de crear, busca la pregunta
+     - Verifica que no exista
+     - Si existe, edítala en lugar de crear nueva
+
+
+💾 ARCHIVOS MODIFICADOS
+══════════════════════════════════════════════════════════════════
+
+  ✓ database/init.sql  → 37 preguntas únicas
+  ✓ Volumen recreado   → Datos limpios
+
+
+📊 ESTADÍSTICAS DEL BANCO
+══════════════════════════════════════════════════════════════════
+
+  Preguntas totales:         37
+  Preguntas cortas:          ~5 (< 100 caracteres)
+  Preguntas medianas:        ~15 (100-200 caracteres)
+  Preguntas largas:          ~17 (> 200 caracteres)
+  
+  Respuestas cortas:         ~10 (< 100 caracteres)
+  Respuestas medianas:       ~20 (100-200 caracteres)
+  Respuestas largas:         ~7 (> 200 caracteres)
+
+
+🚀 PRÓXIMOS PASOS
+══════════════════════════════════════════════════════════════════
+
+  1. Abre http://localhost:5053
+  2. Verifica que veas las 37 preguntas
+  3. Prueba la búsqueda con palabras clave como:
+     - "Python"
+     - "Docker"
+     - "Streamlit"
+     - "FastAPI"
+  4. Exporta a PDF para estudiar
+  5. Usa búsqueda por voz para practicar
+
+
+📚 COMANDOS ÚTILES
+══════════════════════════════════════════════════════════════════
+
+  # Ver todas las preguntas
+  curl http://localhost:5052/api/preguntas
+
+  # Buscar preguntas con "docker"
+  curl "http://localhost:5052/api/preguntas/buscar/query?q=docker"
+
+  # Exportar a PDF
+  curl http://localhost:5052/api/export/pdf -o examen.pdf
+
+  # Exportar a Excel
+  curl http://localhost:5052/api/export/excel -o examen.xlsx
+
+  # Ver logs de la base de datos
+  docker-compose logs database
+
+
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║   🎉 BANCO DE PREGUNTAS ACTUALIZADO EXITOSAMENTE 🎉           ║
+║                                                                ║
+║          37 Preguntas Únicas del Examen Complexivo            ║
+║                                                                ║
+║              http://localhost:5053                            ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+Fecha: 5 de Noviembre de 2025
+Estado: ✅ ACTUALIZADO Y FUNCIONANDO
+Total Preguntas: 37 únicas
+Duplicados Eliminados: 3
+Versión: 2.0.0

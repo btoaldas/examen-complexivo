@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  # Base de Datos PostgreSQL
+  database:
+    image: postgres:15-alpine
+    container_name: examenes_db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: banco_preguntas
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - examenes_network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d banco_preguntas"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: examenes_backend
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      DB_HOST: database
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: admin123
+      DB_NAME: banco_preguntas
+    ports:
+      - "5052:5000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - examenes_network
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Frontend React
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: examenes_frontend
+    environment:
+      VITE_API_URL: http://localhost:5052/api
+    ports:
+      - "5053:80"
+    networks:
+      - examenes_network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  examenes_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
