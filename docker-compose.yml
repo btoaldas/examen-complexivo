@@ -61,7 +61,7 @@ services:
     networks:
       - examenes_network
     depends_on:
-      - backend
+      - examenes_backend
     restart: unless-stopped
 
 networks:
